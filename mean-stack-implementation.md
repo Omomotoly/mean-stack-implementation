@@ -1,25 +1,21 @@
-# MERN Web Stack Deployment on AWS
-
+# MEAN Web Stack Implementation on AWS
 ## Introduction
 
-The MERN stack is a robust, entirely JavaScript-based collection of technologies engineered for building scalable, high-performance web applications. Representing MongoDB, Express.js, React, and Node.js, this architecture consolidates frontend and backend development under a single language runtime. This unified ecosystem accelerates development cycles, minimizes context switching for engineers, and provides a powerful framework for modern cloud applications.
+This project showcases the configuration, containerization, and management of a modern, multi-tier web application architecture designed for scalable and reliable cloud deployment.
 
+---
 
 ### MongoDB
-
-MongoDB serves as the data tier for the MERN stack. Operating as a document-oriented NoSQL database, it stores records in dynamic, binary JSON-like documents (BSON). By eliminating rigid tabular schemas found in traditional relational systems, MongoDB gives developers the flexibility to iterate on data structures seamlessly. Its native support for horizontal scaling and high-throughput operations makes it ideal for modern, cloud-native deployments.
+At the data tier, **MongoDB** serves as the NoSQL document database. It stores application data in flexible, JSON-like documents, allowing the schema to evolve dynamically without complex migrations, which ensures fast read and write operations for heavy data traffic.
 
 ### Express.js
+Handling the server-side logic is **Express.js**, a minimal and flexible Node.js web application framework. It provides a robust set of features for building single-page, multi-page, and hybrid web applications, managing the API routing and handling HTTP requests from the frontend efficiently.
 
-Express.js functions as the lightweight backend web framework, running on top of Node.js. It handles the server's routing mechanics, middleware integration, HTTP request pipelines, and RESTful API generation. Express abstracts the complexities of raw Node.js server setup, allowing developers to construct secure, modular, and optimized server-side application programming interfaces efficiently.
-
-### React
-
-React forms the client-side presentation layer of the stack. Developed by Meta, it is a declarative, component-based JavaScript library utilized for crafting highly interactive single-page applications (SPAs). React relies on a Virtual DOM mechanism to efficiently update and render user interfaces in response to data changes. Its modular nature allows teams to build reusable UI elements, ensuring a responsive and predictable user experience.
+### Angular
+The user interface is powered by **Angular**, a development platform and TypeScript-based framework for building scalable single-page web applications. It delivers a dynamic, responsive client-side experience by efficiently synchronizing data between the UI components and the backend APIs.
 
 ### Node.js
-
-Node.js acts as the foundational runtime environment for the backend server, executing JavaScript outside the constraints of a web browser via Google’s V8 engine. Built on an asynchronous, event-driven, and non-blocking I/O model, Node.js handles a massive volume of concurrent connections with minimal resource overhead. This makes it exceptionally suited for data-intensive, real-time web applications hosted on cloud infrastructure.
+Serving as the foundation for the backend runtime environment is **Node.js**. Built on Chrome's V8 JavaScript engine, it uses an asynchronous, event-driven I/O model that allows the server to handle thousands of concurrent connections with minimal overhead.
 
 ---
 
@@ -30,12 +26,7 @@ Node.js acts as the foundational runtime environment for the backend server, exe
 * **Compute Resource:** Elastic Compute Cloud (EC2) Instance
 * **Operating System:** Ubuntu 26.04 LTS (HVM)
 * **Default Region:** us-east-1
-
-### Security Configuration (Inbound Rules)
-* **SSH (Port 22):** Restricted access for secure remote instance management.
-* **HTTP (Port 80):** Open to internet traffic for standard web access.
-* **HTTPS (Port 443):** Open to internet traffic for SSL/TLS encrypted access.
-* **Custom TCP (Port 5000 / 3000):** Provisioned for application server routing. 
+ 
 
 ## Step 0: Prerequisites
 
